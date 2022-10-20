@@ -37,6 +37,6 @@ pipeline {
    //             docker push timurion/docker-hub:Ressale:latest
      //           '''
   //          }
-        }
+       // }
     
 
