@@ -15,10 +15,10 @@ pipeline {
         stage("docker login") {
             steps {
                 echo " ============== docker login =================="
-                withCredentials([usernamePassword(credentialsId: 'dockerhub_timurion', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh """
-                    docker login -u $USERNAME -p $PASSWORD
-                    """
+    //            withCredentials([usernamePassword(credentialsId: 'dockerhub_timurion', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+      //              sh """
+        //            docker login -u $USERNAME -p $PASSWORD
+          //          """
                 }
             }
         }
@@ -30,13 +30,13 @@ pipeline {
                 }
             }
         }
-        stage("docker push") {
-            steps {
-                echo " ============== start pushing image =================="
-                sh '''
-                docker push timurion/docker-hub:Ressale:latest
-                '''
-            }
+    //    stage("docker push") {
+  //          steps {
+//                echo " ============== start pushing image =================="
+ //               sh '''
+   //             docker push timurion/docker-hub:Ressale:latest
+     //           '''
+  //          }
         }
     }
 }
